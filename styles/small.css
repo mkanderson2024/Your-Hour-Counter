@@ -1,0 +1,49 @@
+:root {
+    --main-bg-color: #F0F6F6;
+    --header-color: #6699CC;
+    --header-alt-color: #FF8C42;
+    --dark-color: #5F5566;
+    --alt-dark-color: #33202A;
+    --header-text: white;
+}
+
+h1 {
+    font-size: 36px;
+    margin-bottom: 0px;
+}
+
+h1,
+h2 {
+    background-color: var(--header-color);
+    color: var(--header-text);
+    border-bottom: solid 1px var(--header-alt-color);
+    padding: 10px;
+    border-radius: .5rem;
+}
+
+h2 {
+    font-size: 30px;
+    text-align: center;
+}
+
+.hero {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 10px;
+}
+
+main {
+    background-color: var(--main-bg-color);
+
+}
+
+.symbol {
+    display: grid;
+    position: relative;
+    left: 13rem;
+    top: -6rem;
+    background-color: white;
+    padding: 5px;
+    border-radius: 10px;
+}

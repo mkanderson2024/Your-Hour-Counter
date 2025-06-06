@@ -5,12 +5,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Your Hour Counter</title>
+    <!-- Styles Links -->
+    <link rel="stylesheet" href="styles/small.css">
 </head>
 
 <body>
     <header>
-        <h1>Your Hour Counter</h1>
-        <div class="hero-container"></div>
+        <div class="title-container">
+            <h1>Your Hour Counter</h1>
+            <img src="/images/symbol.webp" class="symbol" alt="abacus" width="75">
+        </div>
+        <div class="hero-container">
+            <img src="/images/hero_small.webp" class="hero" alt="Trucks on the Road" width="800">
+        </div>
     </header>
     <main>
         <div class="main">
@@ -20,8 +27,13 @@
             </section>
             <section class="day-form">
                 <h2>Add Day</h2>
-                <form type="date" class="date"></form>
-                <form time="time" class="time"></form>
+                <form>
+                    <label for="day">Select a day to count:</label>
+                    <input type="date" id="day" name="day">
+                    <label for="time">Enter time in 24-hour format</label>
+                    <input </form>
+                    <!-- <form type="date" class="date"></form>
+                <form time="time" class="time"></form> -->
             </section>
             <section class="simple-calculator">
                 <h2>Calculation Aids</h2>
