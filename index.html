@@ -7,6 +7,15 @@
     <title>Your Hour Counter</title>
     <!-- Styles Links -->
     <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/medium.css">
+    <link rel="stylesheet" href="styles/forms.css">
+
+    <link rel="icon" href="images/favicon.ico">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Abel&family=Kanit:wght@100;300;400&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
@@ -20,23 +29,49 @@
         </div>
     </header>
     <main>
-        <div class="main">
+        <div class="main-container">
             <section class="days-container">
                 <h2>Days</h2>
                 <!-- Section for Days -->
             </section>
-            <section class="day-form">
+            <section class="day-form-section">
                 <h2>Add Day</h2>
-                <form>
-                    <label for="day">Select a day to count:</label>
-                    <input type="date" id="day" name="day">
-                    <label for="time">Enter time in 24-hour format</label>
-                    <input </form>
-                    <!-- <form type="date" class="date"></form>
-                <form time="time" class="time"></form> -->
+                <form class="day-form">
+                    <fieldset>
+                        <legend>Add a day to Counter</legend>
+                        <label for="day">Enter Date:</label>
+                        <input type="date" id="day" name="day">
+                        <label for="time">Enter hours (HH:MM):</label>
+                        <input type="text" id="hours" name="hours" pattern="^([0-9]{1,2}):([0-5][0-9])$" required>
+                        <button class="list-day">
+                            Add Day
+                        </button>
+                    </fieldset>
+                </form>
+
             </section>
-            <section class="simple-calculator">
+            <section class="calculator-container">
                 <h2>Calculation Aids</h2>
+                <!-- Addition -->
+                <form class="sum-form">
+                    <fieldset>
+                        <legend>Add Up Time</legend>
+                        <label for="add"></label>
+                        <input type="text" id="add-one" pattern="^([0-9]{1,2}):([0-5][0-9])$">
+                        <input type="text" id="add-two" pattern="^([0-9]{1,2}):([0-5][0-9])$">
+                        <button>Add Up</button>
+                    </fieldset>
+                </form>
+                <!-- Subtraction -->
+                <form class="difference-form">
+                    <fieldset>
+                        <legend>Subtract Time</legend>
+                        <label for="subtract"></label>
+                        <input type="text" id="subtract-one" pattern="^([0-9]{1,2}):([0-5][0-9])$">
+                        <input type="text" id="subtract-two" pattern="^([0-9]{1,2}):([0-5][0-9])$">
+                        <button>Subtract</button>
+                    </fieldset>
+                </form>
             </section>
         </div>
         <div class="information-container">
@@ -44,10 +79,13 @@
                 <h2>Count Information</h2>
             </section>
             <section class="buttons-container">
-                <button class="count"></button>
-                <button class="reset"></button>
+                <button class="count">Count</button>
+                <button class="reset">New Count</button>
             </section>
         </div>
+        <section class="links">
+            <h2>Useful Links</h2>
+        </section>
     </main>
     <footer>
 

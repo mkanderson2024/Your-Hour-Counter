@@ -1,0 +1,19 @@
+@media only screen and (min-width: 38rem) {
+    .main-container {
+        display: grid;
+        display: grid;
+        grid-template-columns: minmax(150px, 25%) 1fr;
+    }
+
+    .day-form-container {
+        grid-column: 1 / span 7;
+    }
+
+    .calculator-container {
+        grid-column: 8 / span 9;
+    }
+
+    .information-container {
+        grid-column: 10 / span 10;
+    }
+}
