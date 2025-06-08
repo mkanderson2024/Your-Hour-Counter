@@ -7,21 +7,47 @@
     --header-text: white;
 }
 
-h1 {
-    font-size: 36px;
-    margin-bottom: 0px;
+fieldset {
+    border-radius: 5px;
+    border: solid var(--header-color)
 }
 
-h1,
+.flag-footer {
+    position: relative;
+    top: 7px;
+    left: 5px;
+}
+
+footer {
+    font-family: "kanit";
+    background-color: var(--header-color);
+    color: var(--header-text);
+    border-radius: 10px;
+    border-bottom: var(--header-alt-color);
+    text-align: center;
+    display: block;
+}
+
+header {
+    background-color: var(--header-color);
+    padding: 10px;
+    border-radius: 10px;
+    color: var(--header-text)
+}
+
+h1 {
+    font-size: 32px;
+    margin-bottom: 0px;
+    font-family: "kanit";
+}
+
 h2 {
     background-color: var(--header-color);
     color: var(--header-text);
     border-bottom: solid 1px var(--header-alt-color);
     padding: 10px;
     border-radius: .5rem;
-}
-
-h2 {
+    font-family: "kanit";
     font-size: 30px;
     text-align: center;
 }
@@ -35,14 +61,21 @@ h2 {
 
 main {
     background-color: var(--main-bg-color);
+}
 
+section {
+    margin: 10px 0px;
+}
+
+.sub-title {
+    font-family: "abel";
 }
 
 .symbol {
     display: grid;
     position: relative;
-    left: 13rem;
-    top: -6rem;
+    /* left: 13rem;
+    top: -6rem; */
     background-color: white;
     padding: 5px;
     border-radius: 10px;

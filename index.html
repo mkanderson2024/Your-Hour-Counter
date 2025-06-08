@@ -21,11 +21,15 @@
 <body>
     <header>
         <div class="title-container">
-            <h1>Your Hour Counter</h1>
             <img src="images/symbol.webp" class="symbol" alt="abacus" width="75">
+            <h1>Your Hour Counter</h1>
         </div>
         <div class="hero-container">
+            <!-- <source srcset="images/hero_large.webp" media="(min-width: 1024px)" width="2000"> Used incorrectly can not go inside of a div -->
             <img src="images/hero_small.webp" class="hero" alt="Trucks on the Road" width="800">
+        </div>
+        <div class="sub-title-container">
+            <p class="sub-title">Commercial hour counting made easy through innovative technology.</p>
         </div>
     </header>
     <main>
@@ -38,11 +42,15 @@
                 <h2>Add Day</h2>
                 <form class="day-form">
                     <fieldset>
+                        <!-- Date for the Day -->
                         <legend>Add a day to Counter</legend>
                         <label for="day">Enter Date:</label>
-                        <input type="date" id="day" name="day">
-                        <label for="time">Enter hours (HH:MM):</label>
-                        <input type="text" id="hours" name="hours" pattern="^([0-9]{1,2}):([0-5][0-9])$" required>
+                        <input type="date" id="day" name="day" required title="Enter or select the date of the day">
+                        <!-- Hours for the Day -->
+                        <label for="hours">Enter hours:</label>
+                        <input type="text" id="hours" name="hours" pattern="^([0-9]{1,2}):([0-5][0-9])$" required
+                            title="Enter total On Duty and Driving time here in 24 hour time" placeholder="hh:mm">
+                        <!-- Button to insert the Day into the list-->
                         <button class="list-day">
                             Add Day
                         </button>
@@ -56,24 +64,34 @@
                 <form class="sum-form">
                     <fieldset>
                         <legend>Add Up Time</legend>
-                        <label for="add"></label>
-                        <input type="text" id="add-one" pattern="^([0-9]{1,2}):([0-5][0-9])$">
-                        <input type="text" id="add-two" pattern="^([0-9]{1,2}):([0-5][0-9])$">
+                        <label for="add-one"></label>
+                        <input type="text" id="add-one" pattern="^([0-9]{1,2}):([0-5][0-9])$"
+                            title="Enter time in 24 hour format" placeholder="hh:mm">
+
+                        <label for="add-two"></label>
+                        <input type="text" id="add-two" pattern="^([0-9]{1,2}):([0-5][0-9])$"
+                            title="Enter time in 24 hour format" placeholder="hh:mm">
+                        <p class="sum-form-total">Total:</p>
                         <button>Add Up</button>
+
                     </fieldset>
                 </form>
                 <!-- Subtraction -->
                 <form class="difference-form">
                     <fieldset>
                         <legend>Subtract Time</legend>
-                        <label for="subtract"></label>
+                        <label for="subtract-one"></label>
                         <input type="text" id="subtract-one" pattern="^([0-9]{1,2}):([0-5][0-9])$">
+
+                        <label for="subtract-two"></label>
                         <input type="text" id="subtract-two" pattern="^([0-9]{1,2}):([0-5][0-9])$">
+                        <p class="difference-form-total">Total:</p>
                         <button>Subtract</button>
                     </fieldset>
                 </form>
             </section>
         </div>
+        <!-- End div class="main" -->
         <div class="information-container">
             <section class="days-information">
                 <h2>Count Information</h2>
@@ -88,7 +106,14 @@
         </section>
     </main>
     <footer>
-
+        <div class="footer-container">
+            <p class="foot-text">WDD330 Final Project</p>
+            <p class="foot-text">Michael Anderson</p>
+            <p class="foot-text">© <span id="copyright-year"></span> Your Hour Counter
+                <img class="flag-footer" src="images/flag.webp" alt="flag" width="45">
+            </p>
+            <p id="lastModified">Last Modified: </p>
+        </div>
     </footer>
 </body>
 
