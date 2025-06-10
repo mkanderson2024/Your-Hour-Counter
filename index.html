@@ -16,21 +16,33 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Abel&family=Kanit:wght@100;300;400&display=swap"
         rel="stylesheet">
+
+    <!-- Scripts -->
+    <script src="scripts/AddTime.mjs" type="module"></script>
 </head>
 
 <body>
     <header>
+
         <div class="title-container">
             <img src="images/symbol.webp" class="symbol" alt="abacus" width="75">
             <h1>Your Hour Counter</h1>
         </div>
+
         <div class="hero-container">
-            <!-- <source srcset="images/hero_large.webp" media="(min-width: 1024px)" width="2000"> Used incorrectly can not go inside of a div -->
-            <img src="images/hero_small.webp" class="hero" alt="Trucks on the Road" width="800">
+            <section class="hero-paragraph">
+                <p class="hero-text">Let Your Hour Counter handle the math for you.</p>
+            </section>
+            <picture>
+                <source srcset="images/hero_large.webp" class="hero" media="(min-width: 1024px)" width="2000">
+                <img src="images/hero_small.webp" class="hero" alt="Trucks on the Road" width="800">
+            </picture>
         </div>
+
         <div class="sub-title-container">
             <p class="sub-title">Commercial hour counting made easy through innovative technology.</p>
         </div>
+
     </header>
     <main>
         <div class="main-container">
@@ -56,22 +68,25 @@
                         </button>
                     </fieldset>
                 </form>
-
+                <section class="buttons-container">
+                    <button class="count">Count</button>
+                    <button class="reset">New Count</button>
+                </section>
             </section>
             <section class="calculator-container">
                 <h2>Calculation Aids</h2>
                 <!-- Addition -->
-                <form class="sum-form">
+                <form class="sum-form" id="addition">
                     <fieldset>
                         <legend>Add Up Time</legend>
                         <label for="add-one"></label>
                         <input type="text" id="add-one" pattern="^([0-9]{1,2}):([0-5][0-9])$"
-                            title="Enter time in 24 hour format" placeholder="hh:mm">
+                            title="Enter duration of time in 24 hour format" placeholder="hh:mm">
 
                         <label for="add-two"></label>
                         <input type="text" id="add-two" pattern="^([0-9]{1,2}):([0-5][0-9])$"
-                            title="Enter time in 24 hour format" placeholder="hh:mm">
-                        <p class="sum-form-total">Total:</p>
+                            title="Enter duration of time in 24 hour format" placeholder="hh:mm">
+                        <p class="sum-form-total" id="addition-display">Total:</p>
                         <button>Add Up</button>
 
                     </fieldset>
@@ -81,10 +96,12 @@
                     <fieldset>
                         <legend>Subtract Time</legend>
                         <label for="subtract-one"></label>
-                        <input type="text" id="subtract-one" pattern="^([0-9]{1,2}):([0-5][0-9])$">
+                        <input type="text" id="subtract-one" pattern="^([0-9]{1,2}):([0-5][0-9])$"
+                            title="Enter duration of time in 24 hour format" placeholder="hh:mm">
 
                         <label for="subtract-two"></label>
-                        <input type="text" id="subtract-two" pattern="^([0-9]{1,2}):([0-5][0-9])$">
+                        <input type="text" id="subtract-two" pattern="^([0-9]{1,2}):([0-5][0-9])$"
+                            title="Enter duration of time in 24 hour format" placeholder="hh:mm">
                         <p class="difference-form-total">Total:</p>
                         <button>Subtract</button>
                     </fieldset>
@@ -96,10 +113,6 @@
             <section class="days-information">
                 <h2>Count Information</h2>
             </section>
-            <section class="buttons-container">
-                <button class="count">Count</button>
-                <button class="reset">New Count</button>
-            </section>
         </div>
         <section class="links">
             <h2>Useful Links</h2>
@@ -110,9 +123,9 @@
             <p class="foot-text">WDD330 Final Project</p>
             <p class="foot-text">Michael Anderson</p>
             <p class="foot-text">© <span id="copyright-year"></span> Your Hour Counter
-                <img class="flag-footer" src="images/flag.webp" alt="flag" width="45">
             </p>
-            <p id="lastModified">Last Modified: </p>
+            <img class="footer-symbol" src="images/symbol.webp" alt="flag" width="45">
+            <p class="foot-text" id="lastModified">Last Modified: </p>
         </div>
     </footer>
 </body>

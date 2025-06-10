@@ -12,12 +12,6 @@ fieldset {
     border: solid var(--header-color)
 }
 
-.flag-footer {
-    position: relative;
-    top: 7px;
-    left: 5px;
-}
-
 footer {
     font-family: "kanit";
     background-color: var(--header-color);
@@ -26,6 +20,17 @@ footer {
     border-bottom: var(--header-alt-color);
     text-align: center;
     display: block;
+    align-content: center;
+}
+
+.footer-container {
+    display: block;
+}
+
+.footer-symbol {
+    background-color: var(--header-text);
+    padding: 2px;
+    border-radius: 5px;
 }
 
 header {
@@ -57,6 +62,10 @@ h2 {
     height: auto;
     display: block;
     border-radius: 10px;
+}
+
+.hero-paragraph {
+    font-family: "abel";
 }
 
 main {

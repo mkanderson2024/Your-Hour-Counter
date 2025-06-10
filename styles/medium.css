@@ -8,18 +8,61 @@
         padding: 8px;
     }
 
+    .footer-container {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
 
+    }
 
-    /* footer {} will need work to align correctly on larger screens */
+    .foot-text {
+        margin: 10px;
+    }
+
+    h1 {
+        font-size: 48px;
+        margin-right: 6rem;
+    }
 
     h2 {
         margin-top: 0px;
     }
 
+    .hero {
+        max-width: 700px;
+    }
+
+    .hero-container {
+        display: flex;
+        margin-left: auto;
+        justify-content: flex-end;
+        margin-right: 6rem;
+        column-gap: 3rem;
+        align-items: center;
+    }
+
+    .hero-paragraph {
+        max-width: 300px;
+        font-weight: bold;
+
+    }
+
+    .hero-text {
+        font-size: 46px;
+    }
+
+
+
     .main-container {
         display: grid;
         grid-gap: 1rem;
         grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
+
+    .sub-title {
+        text-align: right;
+        margin-right: 6rem;
     }
 
     .symbol {
@@ -32,6 +75,15 @@
         border-radius: 10px;
     }
 
-
+    .title-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-bottom: 10px;
+        align-items: center;
+        background-color: var(--header-text);
+        border-radius: 10px;
+        color: var(--header-color)
+    }
 
 }
