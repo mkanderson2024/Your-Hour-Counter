@@ -1,4 +1,4 @@
-import { addTimeAndStore, getStoredTime } from './addition.js';
+import { addTimeAndStore, getStoredTime } from './Addition.js';
 
 const form = document.getElementById('addition')
 const resultDisplay = document.getElementById('addition-display')
