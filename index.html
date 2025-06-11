@@ -18,7 +18,7 @@
         rel="stylesheet">
 
     <!-- Scripts -->
-    <script src="scripts/AddTime.mjs" type="module"></script>
+    <script src="scripts/CalculateTime.mjs" type="module"></script>
 </head>
 
 <body>
@@ -92,7 +92,7 @@
                     </fieldset>
                 </form>
                 <!-- Subtraction -->
-                <form class="difference-form">
+                <form class="difference-form" id="subtraction">
                     <fieldset>
                         <legend>Subtract Time</legend>
                         <label for="subtract-one"></label>
@@ -102,7 +102,7 @@
                         <label for="subtract-two"></label>
                         <input type="text" id="subtract-two" pattern="^([0-9]{1,2}):([0-5][0-9])$"
                             title="Enter duration of time in 24 hour format" placeholder="hh:mm">
-                        <p class="difference-form-total">Total:</p>
+                        <p class="difference-form-total" id="subtraction-display">Total:</p>
                         <button>Subtract</button>
                     </fieldset>
                 </form>

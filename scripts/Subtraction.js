@@ -1,4 +1,4 @@
-//Scripts for adding two time durations together.
+//Scripts for subtracting two time durations.
 
 //Gets input of time duration
 function inputStringToMinutes(timeStr) {
@@ -18,14 +18,19 @@ function minutesToTimeString(totalMinutes) {
 }
 
 //Stores sum in local storage
-export function addTimesAndStore(timeA, timeB, key = 'addTime') {
-    const totalMinutes = inputStringToMinutes(timeA) + inputStringToMinutes(timeB);
+export function subtractTimesAndStore(timeA, timeB, key = 'subtractTime') {
+    const totalMinutes = inputStringToMinutes(timeA) - inputStringToMinutes(timeB);
+
+    if (totalMinutes < 0) {
+        throw new Error("Resulting time is negative.")
+    }
+
     const result = minutesToTimeString(totalMinutes);
     localStorage.setItem(key, result);
-    console.log(`Addition complete: ${result}`)
+    console.log(`Subtraction complete: ${result}`)
     return result;
 }
 
-export function getStoredTime(key) {
+export function getStoredTime2(key = 'subtractTime') {
     return localStorage.getItem(key);
 }
