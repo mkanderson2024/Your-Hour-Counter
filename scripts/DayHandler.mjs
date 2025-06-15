@@ -16,6 +16,7 @@ document.getElementById('day-form').addEventListener('submit', (createDay) => {
         const newDay = new Day(date, hours);
         daysList.push(newDay);
         renderDays(daysList);
+        console.log('Should only run once')
     } catch (err) {
         alert('Error: ' + err.message);
     }

@@ -16,7 +16,7 @@ export class Day {
     }
 
     static fromObject(obj) {
-        const day = new Day(obj.date, objduration);
+        const day = new Day(obj.date, obj.duration);
         day.id = obj.id
         return day;
     }

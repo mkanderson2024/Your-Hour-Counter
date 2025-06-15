@@ -30,7 +30,7 @@ form2.addEventListener('submit', (subtract) => {
         const result2 = subtractTimesAndStore(sTime1, sTime2);
         resultDisplay2.textContent = `Total: ${result2}`;
     } catch (err) {
-        resultDisplay2.textContent = `Error: ${error.message}`;
+        resultDisplay2.textContent = `Error: ${err.message}`;
     }
 })
 
