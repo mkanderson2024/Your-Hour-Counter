@@ -5,7 +5,7 @@ export function renderDays(daysList) {
     daysOutput.innerHTML = '';
 
     if (daysList.length === 0) {
-        daysOutput.textContent = 'No days to count yet.'
+        daysOutput.textContent = 'No days to count yet. Add days to begin a count.'
         return;
     }
 

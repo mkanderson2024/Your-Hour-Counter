@@ -8,6 +8,13 @@ import { renderCountTotal } from './RenderCount.js';
 const STORAGE_KEY = 'daysList';
 let daysList = [];
 
+const storedDays = JSON.parse(localStorage.getItem(STORAGE_KEY));
+
+if (storedDays && Array.isArray(storedDays)) {
+    daysList = storedDays.map(Day.fromObject);
+    renderDays(daysList);
+}
+
 document.getElementById('day-form').addEventListener('submit', (createDay) => {
     createDay.preventDefault();
 
@@ -32,3 +39,12 @@ document.getElementById('count').addEventListener('click', () => {
     console.log('Days saved to localStorage');
     console.log(daysList);
 });
+
+document.getElementById('reset').addEventListener('click', () => {
+    if (!confirm('Do you want to start a new count?')) return;
+
+    daysList = [];
+    localStorage.removeItem(STORAGE_KEY);
+    renderDays(daysList);
+    renderCountTotal('0:00');
+})
