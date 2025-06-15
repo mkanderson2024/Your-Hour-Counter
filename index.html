@@ -19,6 +19,7 @@
 
     <!-- Scripts -->
     <script src="scripts/CalculateTime.mjs" type="module"></script>
+    <script src="scripts/DayHandler.mjs" type="module"></script>
 </head>
 
 <body>
@@ -48,16 +49,17 @@
         <div class="main-container">
             <section class="days-container">
                 <h2>Days</h2>
+                <section id="days-display"></section>
                 <!-- Section for Days -->
             </section>
             <section class="day-form-section">
                 <h2>Add Day</h2>
-                <form class="day-form">
+                <form class="day-form" id="day-creation">
                     <fieldset>
                         <!-- Date for the Day -->
                         <legend>Add a day to Counter</legend>
                         <label for="day">Enter Date:</label>
-                        <input type="date" id="day" name="day" required title="Enter or select the date of the day">
+                        <input type="date" id="date" name="date" required title="Enter or select the date of the day">
                         <!-- Hours for the Day -->
                         <label for="hours">Enter hours:</label>
                         <input type="text" id="hours" name="hours" pattern="^([0-9]{1,2}):([0-5][0-9])$" required
@@ -67,11 +69,10 @@
                             Add Day
                         </button>
                     </fieldset>
+                    <fieldset> <button class="count">Count</button>
+                        <button class="reset">New Count</button>
+                    </fieldset>
                 </form>
-                <section class="buttons-container">
-                    <button class="count">Count</button>
-                    <button class="reset">New Count</button>
-                </section>
             </section>
             <section class="calculator-container">
                 <h2>Calculation Aids</h2>
