@@ -28,6 +28,6 @@ document.getElementById('count').addEventListener('click', () => {
 });
 
 function renderDays() {
-    const daysOutput = document.getElementById('output');
-    output.textContent = JSON.stringify(daysList, null, 2);
+    const daysDisplay = document.getElementById('daysDisplay');
+    daysDisplay.textContent = JSON.stringify(daysList, null, 2);
 }
