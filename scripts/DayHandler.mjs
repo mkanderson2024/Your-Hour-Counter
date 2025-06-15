@@ -1,6 +1,7 @@
 //Scripts for handling the creation of day objects
 
 import { Day } from './Day.mjs';
+import { renderDays } from './RenderDay.mjs';
 
 const STORAGE_KEY = 'daysList';
 let daysList = [];
@@ -14,7 +15,7 @@ document.getElementById('day-form').addEventListener('submit', (createDay) => {
     try {
         const newDay = new Day(date, hours);
         daysList.push(newDay);
-        renderDays();
+        renderDays(daysList);
     } catch (err) {
         alert('Error: ' + err.message);
     }
@@ -26,8 +27,3 @@ document.getElementById('count').addEventListener('click', () => {
     console.log('Days saved to localStorage');
     console.log(daysList);
 });
-
-function renderDays() {
-    const daysDisplay = document.getElementById('daysDisplay');
-    daysDisplay.textContent = JSON.stringify(daysList, null, 2);
-}

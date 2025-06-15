@@ -39,7 +39,7 @@ if (stored) {
     resultDisplay.textContent = `Total: ${stored}`;
 }
 
-const stored2 = getStoredTime2('subtract');
+const stored2 = getStoredTime('subtract');
 if (stored2) {
     resultDisplay2.textContent = `Total: ${stored}`;
 }
