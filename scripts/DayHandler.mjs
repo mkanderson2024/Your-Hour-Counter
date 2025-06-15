@@ -2,7 +2,8 @@
 
 import { Day } from './Day.mjs';
 import { renderDays } from './RenderDay.mjs';
-import { getTotalHours } from './Count';
+import { getTotalHours } from './Count.js';
+import { renderCountTotal } from './RenderCount.js';
 
 const STORAGE_KEY = 'daysList';
 let daysList = [];
@@ -25,7 +26,8 @@ document.getElementById('day-form').addEventListener('submit', (createDay) => {
 
 document.getElementById('count').addEventListener('click', () => {
     localStorage.setItem(STORAGE_KEY, JSON.stringify(daysList));
-    const totalCount = getTotalHours(daysList)
+    const total = getTotalHours(daysList);
+    renderCountTotal(total)
     alert('Counting hours...');
     console.log('Days saved to localStorage');
     console.log(daysList);

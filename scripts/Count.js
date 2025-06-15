@@ -1,7 +1,7 @@
 //Handles counting of the total work time
 
 export function getTotalHours(daysList) {
-    let total = 0;
+    let totalMinutes = 0;
 
     daysList.forEach(day => {
         const [hours, minutes] = day.duration.split(':').map(Number);
