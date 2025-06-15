@@ -1,0 +1,1 @@
+//Handles rendering of the count information to the webpage

@@ -7,6 +7,16 @@
     --header-text: white;
 }
 
+.day-display {
+    font-family: abel;
+    font-size: 20px;
+}
+
+.day-list {
+    list-style: none;
+
+}
+
 fieldset {
     border-radius: 5px;
     border: solid var(--header-color)

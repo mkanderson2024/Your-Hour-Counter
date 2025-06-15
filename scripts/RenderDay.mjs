@@ -10,6 +10,7 @@ export function renderDays(daysList) {
     }
 
     const list = document.createElement('ul');
+    list.className = 'day-list';
 
     //Format for the day
     daysList.forEach(day => {
@@ -17,6 +18,7 @@ export function renderDays(daysList) {
         const formattedDate = formatDate(day.date);
 
         item.textContent = `Date: ${formattedDate} Hours: ${day.duration}`;
+        item.className = 'day-item';
         list.appendChild(item);
 
 
