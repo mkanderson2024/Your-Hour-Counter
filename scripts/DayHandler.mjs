@@ -3,21 +3,31 @@
 import { Day } from './Day.mjs';
 
 const STORAGE_KEY = 'daysList';
+let daysList = [];
 
-export function addDay(date, duration) {
-    const newDay = new Day(date, duration);
-    const days = getDays();
-    days.push(newDay);
-    localStorage.setItem(STORAGE_KEY, JSON.stringify(days));
+document.getElementById('day-form').addEventListener('submit', (createDay) => {
+    createDay.preventDefault();
+
+    const date = document.getElementById('date').value;
+    const hours = document.getElementById('hours').value.trim();
+
+    try {
+        const newDay = new Day(date, hours);
+        daysList.push(newDay);
+        renderDays();
+    } catch (err) {
+        alert('Error: ' + err.message);
+    }
+});
+
+document.getElementById('count').addEventListener('click', () => {
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(daysList));
+    alert('Counting hours...');
+    console.log('Days saved to localStorage');
+    console.log(daysList);
+});
+
+function renderDays() {
+    const daysOutput = document.getElementById('output');
+    output.textContent = JSON.stringify(daysList, null, 2);
 }
-
-export function getDays() {
-    const dayData = localStorage.getItem(STORAGE_KEY);
-    const rawList = dayData ? JSON.parse(data) : [];
-    return rawList.map(Day.fromObject);
-}
-
-export function clearDays() {
-    localStorage.removeItem(STORAGE_KEY)
-};
-
