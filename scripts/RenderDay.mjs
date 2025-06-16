@@ -1,4 +1,5 @@
 //Handles rendering the days with thier dates and corripsonding duration of work time
+import { formatDate } from './DateUtilities.js';
 
 export function renderDays(daysList) {
     const daysOutput = document.getElementById('daysDisplay');
@@ -25,12 +26,4 @@ export function renderDays(daysList) {
     });
 
     daysOutput.appendChild(list)
-}
-
-function formatDate(dateString) {
-    const dateObj = new Date(dateString + 'T00:00:00');
-    const month = String(dateObj.getMonth() + 1).padStart(2, '0');
-    const day = String(dateObj.getDate()).padStart(2, '0');
-    const year = dateObj.getFullYear();
-    return `${month}/${day}/${year}`;
 }

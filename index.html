@@ -65,9 +65,8 @@
                         <input type="text" id="hours" name="hours" pattern="^([0-9]{1,2}):([0-5][0-9])$" required
                             title="Enter total On Duty and Driving time here in 24 hour time" placeholder="hh:mm">
                         <!-- Button to insert the Day into the list-->
-                        <button class="list-day">
-                            Add Day
-                        </button>
+                        <button class="list-day">Add Day</button>
+                        <button class="remove" id="remove" type="button">Remove Day</button>
                     </fieldset>
                     <fieldset>
                         <button class="count" id="count" type="button">Count</button>
@@ -114,7 +113,7 @@
         <div class="information-container">
             <section class="days-information">
                 <h2>Count Information</h2>
-                <div id="countDisplay"></div>
+                <div class="count-display" id="countDisplay"></div>
             </section>
         </div>
         <section class="links">

@@ -8,6 +8,15 @@
         padding: 8px;
     }
 
+    .day-display ul {
+        text-align: left;
+        width: 100%;
+    }
+
+    .day-list {
+        margin: 1rem;
+    }
+
     .footer-container {
         display: flex;
         flex-direction: row;

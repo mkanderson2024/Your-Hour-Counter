@@ -1,6 +1,6 @@
 //Handles rendering of the count information to the webpage
 
-export function renderCountTotal(theTotal) {
+export function renderSeventyCount(theTotal) {
     const countOutput = document.getElementById('countDisplay');
     countOutput.innerHTML = '';
 

@@ -2,8 +2,8 @@
 
 import { Day } from './Day.mjs';
 import { renderDays } from './RenderDay.mjs';
-import { getTotalHours } from './Count.js';
-import { renderCountTotal } from './RenderCount.js';
+import { getSeventyHours } from './Count.js';
+import { renderSeventyCount } from './RenderCount.js';
 
 const STORAGE_KEY = 'daysList';
 let daysList = [];
@@ -25,21 +25,22 @@ document.getElementById('day-form').addEventListener('submit', (createDay) => {
         const newDay = new Day(date, hours);
         daysList.push(newDay);
         renderDays(daysList);
-        console.log('Should only run once')
     } catch (err) {
         alert('Error: ' + err.message);
     }
 });
 
+// Counts the total hours for the days listed
 document.getElementById('count').addEventListener('click', () => {
     localStorage.setItem(STORAGE_KEY, JSON.stringify(daysList));
-    const total = getTotalHours(daysList);
-    renderCountTotal(total)
-    alert('Counting hours...');
+    const total = getSeventyHours(daysList);
+    renderSeventyCount(total)
+    alert('Counting complete. See Count Information for details.');
     console.log('Days saved to localStorage');
     console.log(daysList);
 });
 
+// Clears list of days
 document.getElementById('reset').addEventListener('click', () => {
     if (!confirm('Do you want to start a new count?')) return;
 
@@ -48,3 +49,15 @@ document.getElementById('reset').addEventListener('click', () => {
     renderDays(daysList);
     renderCountTotal('0:00');
 })
+
+// Removes the last day from the list
+document.getElementById('remove').addEventListener('click', () => {
+    if (daysList.length === 0) {
+        alert('No days to remove.');
+        return;
+    }
+
+    const removed = daysList.pop();
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(daysList));
+    renderDays(daysList);
+});

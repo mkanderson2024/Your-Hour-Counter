@@ -7,14 +7,26 @@
     --header-text: white;
 }
 
+.count-display p {
+    font-family: abel;
+    margin-left: 1rem;
+    font-size: 20px;
+}
+
 .day-display {
     font-family: abel;
     font-size: 20px;
 }
 
+.day-display ul {
+    text-align: center;
+    width: 100%;
+}
+
 .day-list {
     list-style: none;
-
+    margin: 0px;
+    padding: 0px;
 }
 
 fieldset {
