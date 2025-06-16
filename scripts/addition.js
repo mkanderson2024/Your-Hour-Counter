@@ -26,6 +26,3 @@ export function addTimesAndStore(timeA, timeB, key = 'addTime') {
     return result;
 }
 
-export function getStoredTime(key) {
-    return localStorage.getItem(key);
-}

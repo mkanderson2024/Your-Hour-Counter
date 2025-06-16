@@ -10,16 +10,16 @@
 .day-form input[type="date"],
 .day-form input[type="text"],
 .sum-form input[type="text"],
-.difference-form input[type="text"] {
+.difference-form input[type="text"],
+.distance-form input[type="text"],
+.deta-form input[type="text"] {
     display: block;
     padding: .75rem;
     width: 92%;
     border-radius: .25rem;
 }
 
-.day-form legend,
-.sum-form legend,
-.difference-form legend {
+legend {
     padding: 0 .5rem;
     font-family: "kanit";
     font-size: 20px;
@@ -30,4 +30,9 @@ button {
     margin-top: 10px;
     font-family: "kanit";
     color: var(--alt-dark-color);
+}
+
+form p,
+form label {
+    font-family: abel;
 }

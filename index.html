@@ -18,8 +18,8 @@
         rel="stylesheet">
 
     <!-- Scripts -->
-    <script src="scripts/CalculateTime.mjs" type="module"></script>
-    <script src="scripts/DayHandler.mjs" type="module"></script>
+    <script src="scripts/CalculationsHandler.mjs" type="module"></script>
+    <script src="scripts/CountHandler.mjs" type="module"></script>
 </head>
 
 <body>
@@ -48,12 +48,12 @@
     <main>
         <div class="main-container">
             <section class="days-container">
-                <h2>Days</h2>
+                <h2>Days to Count</h2>
                 <section id="daysDisplay" class="day-display"></section>
                 <!-- Section for Days -->
             </section>
             <section class="day-form-section">
-                <h2>Add Day</h2>
+                <h2>Add Day to Count</h2>
                 <form class="day-form" id="day-form">
                     <fieldset>
                         <!-- Date for the Day -->
@@ -107,13 +107,33 @@
                         <button>Subtract</button>
                     </fieldset>
                 </form>
+                <!-- Distance/Time (deta)-->
+                </form>
+                <form class="deta-form" id="deta">
+                    <fieldset>
+                        <legend>Miles & Estemated Time</legend>
+                        <label for="location-one"></label>
+                        <input type="text" id="location-one" partern="[A-Za-z\s]+" title="Enter start location"
+                            placeholder="Lubbock">
+
+                        <label for="location-two"></label>
+                        <input type="text" id="location-two" partern="[A-Za-z\s]+" title="Enter end location"
+                            placeholder="Salt Lake">
+                        <p class="deta-time" id="time-display">Time:</p>
+                        <p class="deta-miles" id="miles-display">Miles:</p>
+                        <button>Check</button>
+                    </fieldset>
+                </form>
             </section>
         </div>
         <!-- End div class="main" -->
         <div class="information-container">
             <section class="days-information">
                 <h2>Count Information</h2>
-                <div class="count-display" id="countDisplay"></div>
+                <div class="count-display" id="countDisplay">
+                    <div id="count-sixty"></div>
+                    <div id="count-seventy"></div>
+                </div>
             </section>
         </div>
         <section class="links">

@@ -1,13 +1,16 @@
 //Scripts for handling the creation of day objects
 
+import { addDay } from './DayManager.mjs';
 import { Day } from './Day.mjs';
 import { renderDays } from './RenderDay.mjs';
-import { getSeventyHours } from './Count.js';
-import { renderSeventyCount } from './RenderCount.js';
+import { getSixtyHours, getSeventyHours } from './HourCounter.js';
+import { renderCount } from './RenderCount.js';
+
 
 const STORAGE_KEY = 'daysList';
 let daysList = [];
 
+//Renders exsisting days list in case of page not working
 const storedDays = JSON.parse(localStorage.getItem(STORAGE_KEY));
 
 if (storedDays && Array.isArray(storedDays)) {
@@ -15,26 +18,26 @@ if (storedDays && Array.isArray(storedDays)) {
     renderDays(daysList);
 }
 
+// Adds day to to list of days to count
 document.getElementById('day-form').addEventListener('submit', (createDay) => {
     createDay.preventDefault();
 
     const date = document.getElementById('date').value;
     const hours = document.getElementById('hours').value.trim();
 
-    try {
-        const newDay = new Day(date, hours);
-        daysList.push(newDay);
-        renderDays(daysList);
-    } catch (err) {
-        alert('Error: ' + err.message);
+    const result = addDay(daysList, date, hours);
+    if (!result.success) {
+        alert('Error: ' + result.error);
     }
 });
 
-// Counts the total hours for the days listed
+// Counts the total hours for the days listed for code limitations: 60, 70 hour rules
 document.getElementById('count').addEventListener('click', () => {
     localStorage.setItem(STORAGE_KEY, JSON.stringify(daysList));
-    const total = getSeventyHours(daysList);
-    renderSeventyCount(total)
+    const sixtyHoursTotal = getSixtyHours(daysList);
+    const seventyHoursTotal = getSeventyHours(daysList);
+    renderCount(sixtyHoursTotal, 'count-sixty')
+    renderCount(seventyHoursTotal, 'count-seventy')
     alert('Counting complete. See Count Information for details.');
     console.log('Days saved to localStorage');
     console.log(daysList);
@@ -46,8 +49,11 @@ document.getElementById('reset').addEventListener('click', () => {
 
     daysList = [];
     localStorage.removeItem(STORAGE_KEY);
+    const sixtyHoursReset = getSixtyHours(daysList);
+    const seventyHoursReset = getSeventyHours(daysList);
     renderDays(daysList);
-    renderCountTotal('0:00');
+    renderCount(sixtyHoursReset, 'count-sixty');
+    renderCount(seventyHoursReset, 'count-seventy');
 })
 
 // Removes the last day from the list
