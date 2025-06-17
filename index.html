@@ -33,7 +33,7 @@
     <!-- Scripts -->
     <script defer src="scripts/CalculationsHandler.mjs" type="module"></script>
     <script defer src="scripts/CountHandler.mjs" type="module"></script>
-    <script defer src="scripts/utilities.js"></script>
+    <script defer src="scripts/Utilities.mjs" type="module"></script>
 </head>
 
 <body>
@@ -152,6 +152,13 @@
         </div>
         <section class="links">
             <h2>Useful Links</h2>
+            <div id="cards-container"></div>
+            <div id="modal" class="modal">
+                <div class="modal-content">
+                    <span id="modal-close" class="close"></span>
+                    <p id="modal-text"></p>
+                </div>
+            </div>
         </section>
     </main>
     <footer>
