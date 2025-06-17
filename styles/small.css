@@ -16,7 +16,7 @@
 
 /* List-style cards */
 .card {
-    background-color: white;
+    background-color: var(--main-bg-color);
     border-bottom: 1px solid var(--header-color);
     padding: 1rem;
     display: flex;
