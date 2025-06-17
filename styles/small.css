@@ -14,7 +14,6 @@
     max-width: 100%;
 }
 
-/* List-style cards */
 .card {
     background-color: var(--main-bg-color);
     border-bottom: 1px solid var(--header-color);
@@ -31,14 +30,14 @@
 }
 
 .card:hover {
-    background-color: rgba(0, 0, 0, 0.03);
+    background-color: lightblue;
 }
 
-/* Typography & buttons */
 .card h3 {
     font-size: 1.1rem;
     color: var(--alt-dark-color);
     margin: 0 0 0.5rem 0;
+    font-family: "abel"
 }
 
 .card a.visit-button,
@@ -52,7 +51,6 @@
     box-sizing: border-box;
 }
 
-/* Button styles */
 .card a.visit-button {
     background-color: var(--header-color);
     color: var(--header-text);
@@ -78,13 +76,13 @@
 }
 
 .count-display p {
-    font-family: abel;
+    font-family: "abel";
     margin-left: 1rem;
     font-size: 20px;
 }
 
 .day-display {
-    font-family: abel;
+    font-family: "abel";
     font-size: 20px;
 }
 
@@ -177,8 +175,6 @@ section {
 .symbol {
     display: grid;
     position: relative;
-    /* left: 13rem;
-    top: -6rem; */
     background-color: white;
     padding: 5px;
     border-radius: 10px;

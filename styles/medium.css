@@ -31,6 +31,7 @@
         margin: 0 0 0.5rem 0;
         font-size: 1.25rem;
         color: var(--alt-dark-color);
+        font-family: "abel";
     }
 
     .card a.visit-button {
@@ -148,8 +149,6 @@
     .symbol {
         display: grid;
         position: relative;
-        /* left: 21rem;
-        top: -3.75rem; */
         background-color: white;
         padding: 5px;
         border-radius: 10px;

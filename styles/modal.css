@@ -8,7 +8,6 @@
     height: 100%;
     overflow: auto;
     background-color: var(--dark-color);
-    ;
 }
 
 #modal .modal-content {
