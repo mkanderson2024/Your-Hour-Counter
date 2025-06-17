@@ -1,11 +1,78 @@
 @media only screen and (min-width: 38rem) {
 
+    #cards-container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+        justify-content: center;
+        padding: 1rem;
+        background-color: var(--main-bg-color);
+    }
+
+    .card {
+        background-color: white;
+        border: 2px solid var(--header-color);
+        border-radius: 8px;
+        width: 280px;
+        padding: 1rem 1.5rem;
+        box-shadow: 0 2px 6px var(--dark-color);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 6px 15px var(--dark-color);
+    }
+
+    .card h3 {
+        margin: 0 0 0.5rem 0;
+        font-size: 1.25rem;
+        color: var(--alt-dark-color);
+    }
+
+    .card a.visit-button {
+        display: inline-block;
+        background-color: var(--header-color);
+        color: var(--header-text);
+        padding: 0.5rem 1rem;
+        margin: 0.5rem 0 1rem 0;
+        border-radius: 4px;
+        text-decoration: none;
+        font-weight: 600;
+        text-align: center;
+        transition: background-color 0.2s ease;
+    }
+
+    .card a.visit-button:hover {
+        background-color: var(--header-alt-color);
+    }
+
+    .card button {
+        padding: 0.5rem 1rem;
+        border: 1px solid var(--header-color);
+        background: white;
+        color: var(--header-color);
+        font-weight: 600;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: background-color 0.2s ease, color 0.2s ease;
+    }
+
+    .card button:hover {
+        background-color: var(--header-color);
+        color: var(--header-text);
+    }
+
     .days-container,
     .day-form-section,
     .calculator-container {
         border: solid 2px var(--header-color);
         border-radius: .5rem;
         padding: 8px;
+        box-shadow: 0 6px 15px var(--alt-dark-color);
     }
 
     .day-display ul {
@@ -32,6 +99,7 @@
     h1 {
         font-size: 48px;
         margin-right: 6rem;
+
     }
 
     h2 {
@@ -40,6 +108,7 @@
 
     .hero {
         max-width: 700px;
+        box-shadow: 0 6px 15px var(--dark-color);
     }
 
     .hero-container {
@@ -49,11 +118,13 @@
         margin-right: 6rem;
         column-gap: 3rem;
         align-items: center;
+
     }
 
     .hero-paragraph {
         max-width: 300px;
         font-weight: bold;
+        text-shadow: 0 6px 15px var(--dark-color);
 
     }
 
@@ -92,7 +163,8 @@
         align-items: center;
         background-color: var(--header-text);
         border-radius: 10px;
-        color: var(--header-color)
+        color: var(--header-color);
+        box-shadow: 0 6px 15px var(--dark-color);
     }
 
 }

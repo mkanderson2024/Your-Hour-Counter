@@ -1,53 +1,63 @@
 {
     "links": [
         {
+            "title": "Section 395.1",
             "url": "https://www.ecfr.gov/current/title-49/section-395.1",
             "description": "General, applicability, exemptions.",
             "purpose": "Go here to find exemptions like adverse conditions or short haul exemptions."
         },
         {
+            "title": "Section 395.2",
             "url": "https://www.ecfr.gov/current/title-49/section-395.2",
             "description": "Definitions",
             "purpose": "Go here to find definitions like agricultural commodity and on duty time."
         },
         {
+            "title": "Section 395.3",
             "url": "https://www.ecfr.gov/current/title-49/section-395.3",
             "description": "Maximum driving time.",
             "purpose": "Go here to reference maximum driving times like the 14 hour rule, or the 70 hour rule."
         },
         {
+            "title": "Section 395.8 (1)",
             "url": "https://www.ecfr.gov/current/title-49/section-395.8",
             "description": "Driver's record of duty status.",
             "purpose": "Go here for regulations concerning ELDs, Log Books, false logs, and how to prepare logs."
         },
         {
+            "title": "Section 395.8 (2)",
             "url": "https://www.ecfr.gov/current/title-49/section-395.8",
             "description": "Driver's record of duty status.",
             "purpose": "Go here for regulations concerning ELDs, Log Books, false logs, and how to prepare logs."
         },
         {
+            "title": "Section 395.22",
             "url": "https://www.ecfr.gov/current/title-49/section-395.22",
             "description": "Motor carrier responsibilities-In general",
             "purpose": "Go here for what motor carriers must provide concerning ELDs including user manuals and blank logs."
         },
         {
+            "title": "Section 395.28",
             "url": "https://www.ecfr.gov/current/title-49/section-395.28",
             "description": "Special driving categoriesl other driving statuses",
             "purpose": "Go here for for regulations on yard moves and personal conveyance."
         },
         {
+            "title": "Section 395.30",
             "url": "https://www.ecfr.gov/current/title-49/section-395.30",
             "description": "ELD record submissions, edits, annotations, and data retention.",
             "purpose": "Go here for regulations concerning edits, remoarks, notes, or annotations."
         },
         {
+            "title": "Section 395.34",
             "url": "https://www.ecfr.gov/current/title-49/section-395.34",
             "description": "ELD malfunctions and data diagnostic events",
             "purpose": "Go here for regulations on how to handle ELD malfunctions."
         },
         {
+            "title": "FMCSA FAQ",
             "url": "https://www.fmcsa.dot.gov/regulations/hours-service/personal-conveyance-frequently-asked-questions-0",
-            "description": "Personal Conveyance Frequently Aksed Questions",
+            "description": "Personal Conveyance Frequently Asked Questions",
             "purpose": "Go here for guidance from FMCSA on how to use personal conveyance."
         }
     ]

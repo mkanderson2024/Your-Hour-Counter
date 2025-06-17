@@ -16,7 +16,7 @@ export async function renderLinkCards(containerId, modalId, modalTextId, modalCl
             card.className = 'card';
 
             const title = document.createElement('h3');
-            title.textContent = link.description;
+            title.textContent = link.title + ' ' + link.description;
 
             const linkElement = document.createElement('a');
             linkElement.href = link.url;
